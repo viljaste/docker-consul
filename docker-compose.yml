@@ -3,12 +3,20 @@ consul:
   hostname: consul
   restart: always
   ports:
-    - "8200:8200"
+    - "8300:8300"
+    - "8301:8301"
+    - "8301:8301/udp"
+    - "8302:8302"
+    - "8302:8302/udp"
+    - "8400:8400"
+    - "8500:8500"
+    - "8600:8600"
+    - "8600:8600/udp"
   volumes_from:
     - consuldata
   environment:
-    - SERVER_NAME=localhost
-    - BACKEND=file
+    - SERVER=On
+    - BOOTSTRAP_EXPECT=1
   cap_add:
     - IPC_LOCK
 consuldata:
