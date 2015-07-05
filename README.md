@@ -28,6 +28,7 @@ Using the `docker` command:
       --volumes-from consuldata \
       -e SERVER="Off" \
       -e BOOTSTRAP_EXPECT="" \
+      -e ADVERTISE_ADDR="" \
       -d \
       viljaste/consul:latest
 

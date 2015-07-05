@@ -17,6 +17,7 @@ consul:
   environment:
     - SERVER=On
     - BOOTSTRAP_EXPECT=1
+    #- ADVERTISE_ADDR=192.168.0.148
   cap_add:
     - IPC_LOCK
 consuldata:

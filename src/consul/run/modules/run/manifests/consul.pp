@@ -7,5 +7,9 @@ class run::consul {
     include run::consul::bootstrap_expect
   }
 
+  if $advertise_addr {
+    include run::consul::advertise_addr
+  }
+
   bash_exec { 'mkdir -p /consul/data': }
 }
