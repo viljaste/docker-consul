@@ -1,0 +1,18 @@
+consul:
+  image: viljaste/consul:latest
+  hostname: consul
+  restart: always
+  ports:
+    - "8200:8200"
+  volumes_from:
+    - consuldata
+  environment:
+    - SERVER_NAME=localhost
+    - BACKEND=file
+  cap_add:
+    - IPC_LOCK
+consuldata:
+  image: viljaste/data:latest
+  hostname: consuldata
+  volumes:
+    - /consul
