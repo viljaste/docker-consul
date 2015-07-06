@@ -11,5 +11,9 @@ class run::consul {
     include run::consul::advertise_addr
   }
 
+  if $retry_join {
+    include run::consul::retry_join
+  }
+
   bash_exec { 'mkdir -p /consul/data': }
 }
