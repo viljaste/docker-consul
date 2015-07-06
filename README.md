@@ -29,6 +29,7 @@ Using the `docker` command:
       -e SERVER="Off" \
       -e BOOTSTRAP_EXPECT="" \
       -e ADVERTISE_ADDR="" \
+      -e RETRY_JOIN="" \
       -d \
       viljaste/consul:latest
 

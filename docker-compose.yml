@@ -15,11 +15,10 @@ consul:
   volumes_from:
     - consuldata
   environment:
-    - SERVER=On
-    - BOOTSTRAP_EXPECT=1
-    #- ADVERTISE_ADDR=192.168.0.148
-  cap_add:
-    - IPC_LOCK
+    - SERVER=Off
+    - BOOTSTRAP_EXPECT=
+    - ADVERTISE_ADDR=
+    - RETRY_JOIN=
 consuldata:
   image: viljaste/data:latest
   hostname: consuldata

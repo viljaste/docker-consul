@@ -17,3 +17,9 @@ if [ -z "${ADVERTISE_ADDR}" ]; then
 fi
 
 export FACTER_ADVERTISE_ADDR="${ADVERTISE_ADDR}"
+
+if [ -z "${RETRY_JOIN}" ]; then
+  RETRY_JOIN=""
+fi
+
+export FACTER_RETRY_JOIN="${RETRY_JOIN}"
