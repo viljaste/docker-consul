@@ -30,6 +30,7 @@ Using the `docker` command:
       -e BOOTSTRAP_EXPECT="" \
       -e ADVERTISE_ADDR="" \
       -e RETRY_JOIN="" \
+      -e ENCRYPT="" \
       -d \
       viljaste/consul:latest
 

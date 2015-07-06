@@ -23,3 +23,9 @@ if [ -z "${RETRY_JOIN}" ]; then
 fi
 
 export FACTER_RETRY_JOIN="${RETRY_JOIN}"
+
+if [ -z "${ENCRYPT}" ]; then
+  ENCRYPT=""
+fi
+
+export FACTER_ENCRYPT="${ENCRYPT}"

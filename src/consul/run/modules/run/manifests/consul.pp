@@ -15,5 +15,9 @@ class run::consul {
     include run::consul::retry_join
   }
 
+  if $encrypt {
+    include run::consul::encrypt
+  }
+
   bash_exec { 'mkdir -p /consul/data': }
 }

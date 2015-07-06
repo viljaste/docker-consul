@@ -19,6 +19,7 @@ consul:
     - BOOTSTRAP_EXPECT=
     - ADVERTISE_ADDR=
     - RETRY_JOIN=
+    - ENCRYPT=
 consuldata:
   image: viljaste/data:latest
   hostname: consuldata
