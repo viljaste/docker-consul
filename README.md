@@ -49,6 +49,18 @@ Using the `docker-compose` command
       && sudo docker build -t viljaste/consul:latest . \
       && cd -
 
+## Known issues
+
+    https://github.com/hashicorp/consul/issues/352#issuecomment-86199725
+
+    CONTAINER="conntrack" && sudo docker run \
+      --name "${CONTAINER}" \
+      -h "${CONTAINER}" \
+      --net host \
+      --cap-add NET_ADMIN \
+      viljaste/conntrack:latest \ 
+      -F
+      
 ## License
 
 **MIT**
